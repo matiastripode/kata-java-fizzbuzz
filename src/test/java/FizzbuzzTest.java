@@ -42,13 +42,19 @@ public class FizzbuzzTest {
         Assert.assertEquals("fizz", fizzbuzz(6));
     }
 
+    @Test
+    public void test_fizzbuzz_of_fifthen_should_return_fizzbuzz() {
+        Assert.assertEquals("fizzbuzz", fizzbuzz(15));
+    }
+
     private String fizzbuzz(int i) {
         if (i == 0) return "0";
         else if (i == 1) return "1";
         else if (i == 2) return "2";
+        else if (i % 3 == 0 && i % 5 == 0) return "fizzbuzz";
         else if (i % 3 == 0) return "fizz";
         else if (i == 4) return "4";
         else if (i % 5 == 0) return "buzz";
-        else return "fizz";
+        else return "";
     }
 }
