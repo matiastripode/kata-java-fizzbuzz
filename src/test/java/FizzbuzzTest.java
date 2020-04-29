@@ -46,9 +46,9 @@ public class FizzbuzzTest {
         if (i == 0) return "0";
         else if (i == 1) return "1";
         else if (i == 2) return "2";
-        else if (i == 3) return "fizz";
+        else if (i % 3 == 0) return "fizz";
         else if (i == 4) return "4";
-        else if (i == 5) return "buzz";
+        else if (i % 5 == 0) return "buzz";
         else return "fizz";
     }
 }
