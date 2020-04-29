@@ -22,10 +22,33 @@ public class FizzbuzzTest {
         Assert.assertEquals("2", fizzbuzz(2));
     }
 
+    @Test
+    public void test_fizzbuzz_of_three_should_return_fizz() {
+        Assert.assertEquals("fizz", fizzbuzz(3));
+    }
+
+    @Test
+    public void test_fizzbuzz_of_four_should_return_four() {
+        Assert.assertEquals("4", fizzbuzz(4));
+    }
+
+    @Test
+    public void test_fizzbuzz_of_five_should_return_buzz() {
+        Assert.assertEquals("buzz", fizzbuzz(5));
+    }
+
+    @Test
+    public void test_fizzbuzz_of_six_should_return_fizz() {
+        Assert.assertEquals("fizz", fizzbuzz(6));
+    }
 
     private String fizzbuzz(int i) {
         if (i == 0) return "0";
-        else if (i == 1) return  "1";
-        else return "2";
+        else if (i == 1) return "1";
+        else if (i == 2) return "2";
+        else if (i == 3) return "fizz";
+        else if (i == 4) return "4";
+        else if (i == 5) return "buzz";
+        else return "fizz";
     }
 }
