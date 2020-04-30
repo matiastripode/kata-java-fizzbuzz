@@ -11,41 +11,32 @@ public class FizzbuzzTest {
 
     @Test
     public void test_fizzbuzz_of_non_divisible_by_3_nor_by_5_should_return_number() {
-        Assert.assertEquals("0", fizzbuzz(0));
-        Assert.assertEquals("1", fizzbuzz(1));
-        Assert.assertEquals("2", fizzbuzz(2));
-        Assert.assertEquals("4", fizzbuzz(4));
+        Assert.assertEquals("0", Fizzbuzz.compute(0));
+        Assert.assertEquals("1", Fizzbuzz.compute(1));
+        Assert.assertEquals("2", Fizzbuzz.compute(2));
+        Assert.assertEquals("4", Fizzbuzz.compute(4));
     }
 
     @Test
     public void test_fizzbuzz_of_divisible_by_5_should_return_fizz() {
-        Assert.assertEquals("fizz", fizzbuzz(3));
-        Assert.assertEquals("fizz", fizzbuzz(6));
-        Assert.assertEquals("fizz", fizzbuzz(9));
+        Assert.assertEquals("fizz", Fizzbuzz.compute(3));
+        Assert.assertEquals("fizz", Fizzbuzz.compute(6));
+        Assert.assertEquals("fizz", Fizzbuzz.compute(9));
     }
 
     @Test
     public void test_fizzbuzz_of_divisible_by_5_should_return_buzz() {
-        Assert.assertEquals("buzz", fizzbuzz(5));
-        Assert.assertEquals("buzz", fizzbuzz(10));
-        Assert.assertEquals("buzz", fizzbuzz(20));
-        Assert.assertEquals("buzz", fizzbuzz(35));
+        Assert.assertEquals("buzz", Fizzbuzz.compute(5));
+        Assert.assertEquals("buzz", Fizzbuzz.compute(10));
+        Assert.assertEquals("buzz", Fizzbuzz.compute(20));
+        Assert.assertEquals("buzz", Fizzbuzz.compute(35));
     }
 
 
     @Test
     public void test_fizzbuzz_of_divisible_by_3_and_5_should_return_fizzbuzz() {
-        Assert.assertEquals("fizzbuzz", fizzbuzz(15));
-        Assert.assertEquals("fizzbuzz", fizzbuzz(30));
-        Assert.assertEquals("fizzbuzz", fizzbuzz(90));
-    }
-
-
-    private String fizzbuzz(int i) {
-        if (i == 0) return String.valueOf(i);
-        else if (i % 3 == 0 && i % 5 == 0) return "fizzbuzz";
-        else if (i % 3 == 0) return "fizz";
-        else if (i % 5 == 0) return "buzz";
-        else return String.valueOf(i);
+        Assert.assertEquals("fizzbuzz", Fizzbuzz.compute(15));
+        Assert.assertEquals("fizzbuzz", Fizzbuzz.compute(30));
+        Assert.assertEquals("fizzbuzz", Fizzbuzz.compute(90));
     }
 }
